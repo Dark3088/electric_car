@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="325dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_car"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardElevation="8dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_car"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:contentDescription="@string/eletric_car_1_description"
+                android:src="@drawable/electric_car_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cl_content" />
+
+            <ImageButton
+                android:id="@+id/ib_favorite"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="16dp"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/ic_star"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@string/description_favorite_star" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_marginStart="24dp"
+                android:text="@string/price"
+                style="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_car" />
+
+            <TextView
+                android:id="@+id/tv_price_value"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/price_value"
+                style="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toEndOf="@id/tv_price"
+                app:layout_constraintTop_toBottomOf="@id/iv_car"/>
+
+            <TextView
+                android:id="@+id/tv_battery"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="24dp"
+                android:text="@string/battery"
+                style="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_price"/>
+
+            <TextView
+                android:id="@+id/tv_battery_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/battery_value"
+                style="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toEndOf="@id/tv_battery"
+                app:layout_constraintTop_toTopOf="@id/tv_battery"/>
+
+            <TextView
+                android:id="@+id/tv_horse_pow"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="24dp"
+                android:text="@string/horse_power"
+                style="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_battery"/>
+
+            <TextView
+                android:id="@+id/tv_horse_pow_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/horse_power_value"
+                style="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toEndOf="@id/tv_horse_pow"
+                app:layout_constraintTop_toTopOf="@id/tv_horse_pow"/>
+
+            <TextView
+                android:id="@+id/tv_recharge"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="24dp"
+                android:text="@string/recharge"
+                style="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_horse_pow"/>
+
+            <TextView
+                android:id="@+id/tv_recharge_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/recharge_value"
+                style="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toEndOf="@id/tv_recharge"
+                app:layout_constraintTop_toTopOf="@id/tv_recharge"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
