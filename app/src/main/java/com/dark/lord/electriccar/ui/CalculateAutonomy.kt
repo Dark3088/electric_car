@@ -36,8 +36,8 @@ class CalculateAutonomy : AppCompatActivity() {
         val text: String = getString(R.string.placeholder_result, result)
         val styledText: Spanned = fromHtml(text, FROM_HTML_MODE_LEGACY)
 
-        if (!result.isNaN())
-        binding.tvResultText.text = styledText
+        if (result.isNaN().not())
+            binding.tvResultText.text = styledText
 
     }
 }
