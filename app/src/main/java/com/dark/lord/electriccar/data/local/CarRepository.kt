@@ -4,10 +4,10 @@ import android.content.ContentValues
 import android.content.Context
 import android.provider.BaseColumns
 import android.util.Log
-import com.dark.lord.electriccar.data.local.CarContract.CarEntry.COLUMN_NAME_BATERIA
-import com.dark.lord.electriccar.data.local.CarContract.CarEntry.COLUMN_NAME_POTENCIA
-import com.dark.lord.electriccar.data.local.CarContract.CarEntry.COLUMN_NAME_PRECO
-import com.dark.lord.electriccar.data.local.CarContract.CarEntry.COLUMN_NAME_RECARGA
+import com.dark.lord.electriccar.data.local.CarContract.CarEntry.COLUMN_NAME_BATTERY
+import com.dark.lord.electriccar.data.local.CarContract.CarEntry.COLUMN_NAME_HORSE_POW
+import com.dark.lord.electriccar.data.local.CarContract.CarEntry.COLUMN_NAME_PRICE
+import com.dark.lord.electriccar.data.local.CarContract.CarEntry.COLUMN_NAME_RECHARGE
 import com.dark.lord.electriccar.data.local.CarContract.CarEntry.COLUMN_NAME_URL_PHOTO
 import com.dark.lord.electriccar.data.local.CarContract.CarEntry
 import com.dark.lord.electriccar.data.local.CarContract.CarEntry.COLUMN_NAME_CAR_ID
@@ -16,7 +16,7 @@ import com.dark.lord.electriccar.domain.Car
 
 class CarRepository(private val context: Context) {
 
-    fun save(car: Car): Boolean {
+    private fun save(car: Car): Boolean {
 
         try {
             val dbHelper = CarsDbHelper(context)
@@ -24,10 +24,10 @@ class CarRepository(private val context: Context) {
 
             val values = ContentValues().apply {
                 put(COLUMN_NAME_CAR_ID, car.id)
-                put(COLUMN_NAME_PRECO, car.preco)
-                put(COLUMN_NAME_POTENCIA, car.potencia)
-                put(COLUMN_NAME_BATERIA, car.bateria)
-                put(COLUMN_NAME_RECARGA, car.recarga)
+                put(COLUMN_NAME_PRICE, car.preco)
+                put(COLUMN_NAME_HORSE_POW, car.potencia)
+                put(COLUMN_NAME_BATTERY, car.bateria)
+                put(COLUMN_NAME_RECHARGE, car.recarga)
                 put(COLUMN_NAME_URL_PHOTO, car.urlPhoto)
             }
 
@@ -51,9 +51,9 @@ class CarRepository(private val context: Context) {
         try {
             val dbHelper = CarsDbHelper(context)
             val db = dbHelper.writableDatabase
-            val _id = arrayOf(car.id.toString())
+            val carID = arrayOf(car.id.toString())
 
-            val deleted = db?.delete(CarEntry.TABLE_NAME, "car_id=?", _id)
+            val deleted = db?.delete(CarEntry.TABLE_NAME, "car_id=?", carID)
 
             if (deleted != null) {
                 db.close()
@@ -68,7 +68,7 @@ class CarRepository(private val context: Context) {
         return false
     }
 
-    fun findCarById(id: Int): Car {
+    private fun findCarById(id: Int): Car {
         val dbHelper = CarsDbHelper(context)
         val db = dbHelper.writableDatabase
 
@@ -77,10 +77,10 @@ class CarRepository(private val context: Context) {
         val columns = arrayOf(
             BaseColumns._ID,
             COLUMN_NAME_CAR_ID,
-            COLUMN_NAME_PRECO,
-            COLUMN_NAME_BATERIA,
-            COLUMN_NAME_POTENCIA,
-            COLUMN_NAME_RECARGA,
+            COLUMN_NAME_PRICE,
+            COLUMN_NAME_BATTERY,
+            COLUMN_NAME_HORSE_POW,
+            COLUMN_NAME_RECHARGE,
             COLUMN_NAME_URL_PHOTO
         )
 
@@ -102,10 +102,10 @@ class CarRepository(private val context: Context) {
 
                 itemCar = itemCar.copy(
                     id = getLong(getColumnIndexOrThrow(COLUMN_NAME_CAR_ID)).toInt(),
-                    preco = getString(getColumnIndexOrThrow(COLUMN_NAME_PRECO)),
-                    bateria = getString(getColumnIndexOrThrow(COLUMN_NAME_BATERIA)),
-                    potencia = getString(getColumnIndexOrThrow(COLUMN_NAME_POTENCIA)),
-                    recarga = getString(getColumnIndexOrThrow(COLUMN_NAME_RECARGA)),
+                    preco = getString(getColumnIndexOrThrow(COLUMN_NAME_PRICE)),
+                    bateria = getString(getColumnIndexOrThrow(COLUMN_NAME_BATTERY)),
+                    potencia = getString(getColumnIndexOrThrow(COLUMN_NAME_HORSE_POW)),
+                    recarga = getString(getColumnIndexOrThrow(COLUMN_NAME_RECHARGE)),
                     urlPhoto = getString(getColumnIndexOrThrow(COLUMN_NAME_URL_PHOTO)),
                     isFavorite = true
                 )
@@ -123,10 +123,10 @@ class CarRepository(private val context: Context) {
         val columns = arrayOf(
             BaseColumns._ID,
             COLUMN_NAME_CAR_ID,
-            COLUMN_NAME_PRECO,
-            COLUMN_NAME_BATERIA,
-            COLUMN_NAME_POTENCIA,
-            COLUMN_NAME_RECARGA,
+            COLUMN_NAME_PRICE,
+            COLUMN_NAME_BATTERY,
+            COLUMN_NAME_HORSE_POW,
+            COLUMN_NAME_RECHARGE,
             COLUMN_NAME_URL_PHOTO
         )
 
@@ -148,10 +148,10 @@ class CarRepository(private val context: Context) {
                 itemCar.add(
                     Car(
                         id = getLong(getColumnIndexOrThrow(COLUMN_NAME_CAR_ID)).toInt(),
-                        preco = getString(getColumnIndexOrThrow(COLUMN_NAME_PRECO)),
-                        bateria = getString(getColumnIndexOrThrow(COLUMN_NAME_BATERIA)),
-                        potencia = getString(getColumnIndexOrThrow(COLUMN_NAME_POTENCIA)),
-                        recarga = getString(getColumnIndexOrThrow(COLUMN_NAME_RECARGA)),
+                        preco = getString(getColumnIndexOrThrow(COLUMN_NAME_PRICE)),
+                        bateria = getString(getColumnIndexOrThrow(COLUMN_NAME_BATTERY)),
+                        potencia = getString(getColumnIndexOrThrow(COLUMN_NAME_HORSE_POW)),
+                        recarga = getString(getColumnIndexOrThrow(COLUMN_NAME_RECHARGE)),
                         urlPhoto = getString(getColumnIndexOrThrow(COLUMN_NAME_URL_PHOTO)),
                         isFavorite = true
                     )
