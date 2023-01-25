@@ -21,5 +21,7 @@
     <string name="description_internet_off">Uma imagem reresentando ausência de conexão de internet</string>
     <string name="text_no_internet">Sem conexão de internet</string>
     <string name="description_favorite_star">Um ícone de estrela</string>
-    <string name="placeholder_result">O resultado é 0.0</string>
+    <string name="welcome_messages">Hello, %1$s! You have &lt;b>%2$d new messages&lt;/b>.</string>
+    <string name="placeholder_result">O resultado é &lt;b>R$ %1$d.00&lt;/b></string>
+
 </resources>

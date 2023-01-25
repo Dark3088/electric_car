@@ -1,4 +1,4 @@
-package com.dark.lord.electriccar
+package com.dark.lord.electriccar.extensions
 
 import android.widget.EditText
 
