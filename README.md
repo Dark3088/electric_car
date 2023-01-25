@@ -1,4 +1,4 @@
-GitHub App
+Electric Car App
 ===================================
 
 This project is my solution for the "electric-car" Bootcamp, provided
