@@ -21,23 +21,23 @@ class CalculateAutonomy : AppCompatActivity() {
     }
 
     private fun setUpListeners() {
-        binding.ibCloseButton.setOnClickListener{ finish() }
+        binding.ibCloseButton.setOnClickListener { finish() }
         binding.btCalculateResult.setOnClickListener {
             calculate()
         }
     }
 
-    private fun calculate(){
+    private fun calculate() {
         val priceValue = binding.etPrice.getFloatValueFromText()
         val kmValue = binding.etKmRun.getFloatValueFromText()
 
-        if (priceValue > 0.toFloat() && kmValue > 0.toFloat()) {
-            val result = priceValue / kmValue
+        val result = priceValue / kmValue
 
-            val text: String = getString(R.string.placeholder_result, result.toInt())
-            val styledText: Spanned = fromHtml(text, FROM_HTML_MODE_LEGACY)
+        val text: String = getString(R.string.placeholder_result, result)
+        val styledText: Spanned = fromHtml(text, FROM_HTML_MODE_LEGACY)
 
-            binding.tvResultText.text = styledText
-        }
+        if (!result.isNaN())
+        binding.tvResultText.text = styledText
+
     }
 }

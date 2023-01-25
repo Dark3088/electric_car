@@ -22,6 +22,6 @@
     <string name="text_no_internet">Sem conexão de internet</string>
     <string name="description_favorite_star">Um ícone de estrela</string>
     <string name="welcome_messages">Hello, %1$s! You have &lt;b>%2$d new messages&lt;/b>.</string>
-    <string name="placeholder_result">O resultado é &lt;b>R$ %1$d.00&lt;/b></string>
+    <string name="placeholder_result">O resultado é &lt;b>R$ %1$.2f&lt;/b></string>
 
 </resources>
