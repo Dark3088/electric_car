@@ -5,23 +5,21 @@
     <string name="favorite">Favoritos</string>
     <string name="price">Preço</string>
     <string name="price_value">R$ 120.000.00</string>
-    <string name="eletric_car_1_description">A silver electric car</string>
+    <string name="eletric_car_1_description">Foto de um carro elétrico prateado</string>
     <string name="battery">Bateria</string>
     <string name="battery_value">94,6 kWh</string>
     <string name="horse_power">Potência</string>
     <string name="recharge">Recarga</string>
     <string name="horse_power_value">964 cv</string>
     <string name="recharge_value">26 min</string>
-    <string name="price_kwh">Preço kWh</string>
-    <string name="km_run">Km Percorrido</string>
+    <string name="price_kwh">Preço do kWh</string>
+    <string name="km_run">Km Percorridos</string>
     <string name="calculate">Calcular</string>
     <string name="calculate_autonomy">Calcular Autonomia</string>
-    <string name="description_close_button">A button to close the current screen</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="description_fab_calculate">A button for calculating</string>
-    <string name="description_internet_off">A wifi image with a trace cutting it from top to bottom</string>
+    <string name="description_close_button">Um botão para fechar a tela atual</string>
+    <string name="description_fab_calculate">Um botão para calcular</string>
+    <string name="description_internet_off">Uma imagem reresentando ausência de conexão de internet</string>
     <string name="text_no_internet">Sem conexão de internet</string>
-    <string name="description_favorite_star">An image of an outlined star</string>
+    <string name="description_favorite_star">Um ícone de estrela</string>
     <string name="placeholder_result">O resultado é 0.0</string>
 </resources>
