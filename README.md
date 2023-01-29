@@ -32,7 +32,7 @@ Technologies used:
 
 Screenshots:
 ------------
-<img src="app/src/assets/Electric_Car_1.png" width="300" /> <img src="app/src/assets/Electric_Car_2.png" width="300" /> <img src="app/src/assets/Electric_Car_3.png" width="300" />
+<img src="app/src/assets/Electric_Car_1.png" width="250" /> <img src="app/src/assets/Electric_Car_2.png" width="250" /> <img src="app/src/assets/Electric_Car_3.png" width="250" />
 
 
 Getting Started
